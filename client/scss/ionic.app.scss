@@ -91,6 +91,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     justify-content: space-between;
      div {
        padding-left: 5%;
+       width: 80%;
       p{
         color: hsl(226, 39%, 24%);
         padding-left: 5%;
@@ -115,6 +116,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       justify-content: center;
       align-items: center;
       a{
+        padding-top: 2%;
         font-size: 2em;
         text-decoration: none;
       }

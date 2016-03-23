@@ -38,7 +38,7 @@ angular.module('capstone', ['ionic', 'ngCordova', 'capstone.controllers', 'capst
     .state('room',{
       url: '/room/:id',
       controller: function($scope, $stateParams, $http, $ionicModal){
-        var socket = io.connect('https://safe-hollows-28081.herokuapp.com/')
+        var socket = io.connect('https://safe-hollows-28081.herokuapp.com')
         $scope.id = $stateParams.id
         // $scope.eventName = $stateParams.name
         // $scope.venueName = $stateParams.venueName
@@ -93,14 +93,23 @@ angular.module('capstone', ['ionic', 'ngCordova', 'capstone.controllers', 'capst
         })
       };
 
-        socket.on('post event', function(message){
+      var favPosts = []
+      window.localStorage.setItem("posts", JSON.stringify(favPosts))
+
+        socket.on('display event', function(message){
           console.log(message)
           $scope.postResults.push(message)
+          $scope.$apply()
         })
 
       $scope.isActive = false
-      $scope.favoritesButton = function(){
+      $scope.favoritesButton = function(result){
+        $scope.result = result
         $scope.isActive = !$scope.isActive
+        postArray = JSON.parse(window.localStorage.posts)
+        postArray.push($scope.result)
+        console.log(postArray)
+        window.localStorage.setItem("posts", JSON.stringify(postArray))
       }
       },
       templateUrl: 'templates/live.html'
