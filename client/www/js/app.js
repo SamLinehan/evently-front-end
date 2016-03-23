@@ -38,7 +38,7 @@ angular.module('capstone', ['ionic', 'ngCordova', 'capstone.controllers', 'capst
     .state('room',{
       url: '/room/:id',
       controller: function($scope, $stateParams, $http, $ionicModal){
-        var socket = io.connect('https://ancient-springs-74201.herokuapp.com')
+        var socket = io.connect('https://safe-hollows-28081.herokuapp.com/')
         $scope.id = $stateParams.id
         // $scope.eventName = $stateParams.name
         // $scope.venueName = $stateParams.venueName
