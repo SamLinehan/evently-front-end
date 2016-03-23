@@ -1,0 +1,28 @@
+<ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Post</h1>
+          <button class="button button-clear button-primary" ng-click="hideModal()">Close</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <form ng-submit="createPost(postBody, postName, postImage)">
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">Body</span>
+                <input ng-model="postBody" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input ng-model="postName" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Image (Optional)</span>
+                <input ng-model="postImage" type="text">
+                <button type="button" class="button button-energized" ng-click="addImage()">
+                  Add image
+                </button><br><br>
+              </label>
+              <button type="submit" class="button button-full button-positive">Create</button>
+            </div>
+          </form>
+        </ion-content>
+</ion-modal-view>

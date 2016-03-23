@@ -1,0 +1,123 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+
+.background, .background .pane, .background .item, .background .item-complex .item-content {
+  background-color: hsl(226, 39%, 24%);
+  color: hsl(37, 97%, 92%);
+}
+
+.templateView {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  h1{
+    padding-left: 5%;
+    padding-right: 5%;
+    color: hsl(37, 97%, 92%);
+  }
+  h3{
+    padding-left: 5%;
+    padding-right: 5%;
+    color: hsl(37, 97%, 92%);
+  }
+
+  .searchHead{
+    margin-top: 10px;
+  }
+
+  .searchInputField{
+    color: hsl(37, 97%, 92%);
+  }
+
+  .eventModalButton{
+    width: 50%;
+    align-self: center;
+    padding: 1%;
+    background-color: hsl(51, 100%, 57%);
+    border: none;
+  }
+  .postModalButton{
+    background-color: white;
+    width: 50%;
+    align-self: center;
+    margin-bottom: 25px;
+  }
+
+  .resultField{
+    margin-left: 5%;
+  }
+
+  .resultsSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .eventName {
+    text-decoration: underline;
+    color: hsl(51, 100%, 57%);
+  }
+  .viewPostsButton{
+    background-color: hsl(138, 81%, 40%);
+    border: none;
+    margin-right: 5%;
+  }
+  .postContainer{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: hsl(37, 97%, 98%);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+     div {
+       padding-left: 5%;
+      p{
+        color: hsl(226, 39%, 24%);
+        padding-left: 5%;
+      }
+      h6{
+        color: hsl(226, 39%, 24%);
+        padding-left: 5%;
+      }
+    }
+    button {
+      padding-right: 5%;
+    }
+    .activeFavorite {
+      color: hsl(51, 100%, 57%);
+    }
+  }
+  .liveNav{
+    display: flex;
+    div{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a{
+        font-size: 2em;
+        text-decoration: none;
+      }
+    }
+  }
+}

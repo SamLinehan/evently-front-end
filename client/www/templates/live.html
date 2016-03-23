@@ -1,0 +1,25 @@
+<section class="templateView" ng-init="postResults">
+  <nav class="liveNav">
+    <div>
+      <a href="#">Live</a>
+    </div>
+    <div>
+      <a href="#">Favorites</a>
+    </div>
+  </nav>
+  <h3>{{eventName}}</h3>
+  <button class="button button-icon ion-compose postModalButton" ng-click="showModal()">Create Post</button>
+  <div ng-repeat="postResult in postResults">
+    <div class="postContainer">
+      <div>
+        <p>
+          {{postResult.body}}
+        </p>
+        <h6>
+          {{postResult.name}}
+        </h6>
+      </div>
+    <button type="button" class="button button-icon ion-star custom-icon" ng-class="{'activeFavorite': isActive}" ng-click="favoritesButton()"></button>
+    </div>
+  </div>
+</section>

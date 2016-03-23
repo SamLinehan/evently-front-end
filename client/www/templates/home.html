@@ -1,0 +1,27 @@
+<ion-scroll direction="xy" height="1000px">
+  <div class="templateView">
+    <!-- <h2>Welcome! Please Log in</h2>
+    <button class="button icon-left ion-social-twitter"></button>
+    <button ng-click="googleAuth()" class="button icon-left ion-social-google"></button> -->
+    <h3 class="searchHead">Look up a Venue or Event</h3>
+    <div class="list list-inset">
+      <form ng-submit="search(value)">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input class="searchInputField" type="text" ng-model="value" placeholder="Search" />
+        </label>
+      </form>
+    </div>
+    <section class="searchResults" ng-init="results">
+      <div ng-repeat="result in results" class="resultsSection">
+        <div class="resultField">
+          <h5 class="eventName">{{result.name}}</h5>
+          <p>{{result.venue.name}}<p>
+          <p>{{result.venue.city}}, {{result.venue.state}}</p>
+        </div>
+        <button ui-sref="room({id: result._id.$oid, name: result.name, venueName: result.venue.name, venueCity: result.venue.city, venueState: result.venue.state })" type="button" class="viewPostsButton">View Posts</button>
+      </div>
+    </section>
+    <button ng-click="showEventModal()" type="button" class="eventModalButton">Add an Event</button>
+  </div>
+</ion-scroll>

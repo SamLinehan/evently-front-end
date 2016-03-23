@@ -1,0 +1,29 @@
+<ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Add an Event</h1>
+          <button class="button button-clear button-primary" ng-click="hideEventModal()">Close</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <form ng-submit="createEvent(eventName, venueName, venueCity, venueState)">
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">Event Name</span>
+                <input ng-model="eventName" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Venue Name</span>
+                <input ng-model="venueName" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">City</span>
+                <input ng-model="venueCity" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">State</span>
+                <input ng-model="venueState" type="text">
+              </label>
+              <button type="submit" class="button button-full button-positive">Add Event</button>
+            </div>
+          </form>
+        </ion-content>
+</ion-modal-view>
