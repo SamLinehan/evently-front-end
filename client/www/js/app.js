@@ -1,4 +1,4 @@
-angular.module('capstone', ['ionic', 'ngCordova', 'capstone.controllers', 'capstone.services', 'firebase'])
+angular.module('capstone', ['ionic', 'ngCordova', 'ngAnimate', 'capstone.controllers', 'capstone.services', 'firebase'])
 
 .run(function($ionicPlatform) {
 
@@ -37,13 +37,9 @@ angular.module('capstone', ['ionic', 'ngCordova', 'capstone.controllers', 'capst
     })
     .state('room',{
       url: '/room/:id',
-      controller: function($scope, $stateParams, $http, $ionicModal){
-        var socket = io.connect('https://safe-hollows-28081.herokuapp.com')
+      controller: function($scope, $stateParams, $http, $ionicModal, $cordovaVibration){
+        var socket = io.connect('http://localhost:3000')
         $scope.id = $stateParams.id
-        // $scope.eventName = $stateParams.name
-        // $scope.venueName = $stateParams.venueName
-        // $scope.venueCity = $stateParams.venueCity
-        // $scope.venueState = $stateParams.venueState
         $http.get('https://infinite-waters-87993.herokuapp.com/events').then(function(response){
           $scope.postResults = []
           for(var i = 0; i < response.data.length; i++){
@@ -91,6 +87,7 @@ angular.module('capstone', ['ionic', 'ngCordova', 'capstone.controllers', 'capst
         $http.post("https://infinite-waters-87993.herokuapp.com/create_post", postData).then(function(response){
           return
         })
+        $cordovaVibration.vibrate(100);
       };
 
       var favPosts = []

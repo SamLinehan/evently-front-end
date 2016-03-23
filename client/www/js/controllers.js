@@ -109,6 +109,7 @@ function HomeController($scope, $http, $ionicModal){
        console.log(data)
        return;
      })
+     $cordovaVibration.vibrate(100);
    }
 
    $ionicModal.fromTemplateUrl('templates/eventModal.html', {

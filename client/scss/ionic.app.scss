@@ -108,6 +108,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       color: hsl(51, 100%, 57%);
     }
   }
+  .repeat-enter-setup, .repeat-leave-setup {
+    -webkit-transition:all linear 0.3s;
+    -moz-transition:all linear 0.3s;
+    -ms-transition:all linear 0.3s;
+    -o-transition:all linear 0.3s;
+    transition:all linear 0.3s;
+  }
+
+  }
   .liveNav{
     display: flex;
     div{
