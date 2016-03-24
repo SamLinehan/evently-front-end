@@ -33,11 +33,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .concertImage h2 {
   position: absolute;
-  color: hsl(138, 81%, 40%);
+  color: black;
   margin-left: 40px;
-  margin-top: 180px;
+  margin-top: 150px;
   font-family: 'Montserrat', sans-serif;
-  text-shadow: 1px white;
+  text-shadow: 1px 1px 1px white;
 }
 
 .concertImage img{
