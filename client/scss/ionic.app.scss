@@ -27,6 +27,24 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   color: hsl(37, 97%, 92%);
 }
 
+.concertImage{
+  position:relative;
+}
+
+.concertImage h2 {
+  position: absolute;
+  color: hsl(138, 81%, 40%);
+  margin-left: 40px;
+  margin-top: 180px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 1px white;
+}
+
+.concertImage img{
+  width: 100%;
+  height: 400px;
+}
+
 .templateView {
   display: flex;
   flex-direction: column;
@@ -108,13 +126,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       color: hsl(51, 100%, 57%);
     }
   }
-  .repeat-enter-setup, .repeat-leave-setup {
-    -webkit-transition:all linear 0.3s;
-    -moz-transition:all linear 0.3s;
-    -ms-transition:all linear 0.3s;
-    -o-transition:all linear 0.3s;
-    transition:all linear 0.3s;
-  }
 
   }
   .liveNav{
@@ -124,11 +135,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-bottom: 2%;
       a{
         padding-top: 2%;
         font-size: 2em;
         text-decoration: none;
       }
+      a span {
+        color: hsl(37, 97%, 98%);
+      }
+    }
+    .liveLink {
+    background-color: hsl(138, 81%, 40%);
+    }
+    .favLink {
+      background-color: hsl(138, 81%, 40%);
     }
   }
-}

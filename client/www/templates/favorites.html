@@ -1,4 +1,10 @@
-<header class="templateView">
-  <button type="button" name="liveButton">Live</button>
-  <button type="button" name="favoritesButton">Favorites</button>
-</header>
+<div class="templateView">
+  <nav class="liveNav">
+    <div ng-class="{'liveLink': favActive}">
+      <a ng-click="toggleFav()"><span>Live</span</a>
+    </div>
+    <div ng-class="{'favLink': liveActive}">
+      <a ng-click="toggleLive()"><span>Favorites</span></a>
+    </div>
+  </nav>
+</div>

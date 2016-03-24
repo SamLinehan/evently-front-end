@@ -98,7 +98,7 @@ function HomeController($scope, $http, $ionicModal){
        }
      })
    }
-   $scope.createEvent = function(eventName, venueName, venueCity, venueState){
+   $scope.createEvent = function(eventName, venueName, venueCity, venueState, $cordovaVibration){
      var data = {
          eventName: eventName,
          venueName: venueName,
