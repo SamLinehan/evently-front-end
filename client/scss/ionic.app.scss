@@ -27,7 +27,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   color: hsl(37, 97%, 92%);
 }
 
-.concertImage{
+.concertImage {
   position:relative;
 }
 
@@ -40,7 +40,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   text-shadow: 1px 1px 1px white;
 }
 
-.concertImage img{
+.concertImage img {
   width: 100%;
   height: 400px;
 }
@@ -49,58 +49,63 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   display: flex;
   flex-direction: column;
   margin-top: 45px;
-  h1{
-    padding-left: 5%;
-    padding-right: 5%;
-    color: hsl(37, 97%, 92%);
-  }
-  h3{
+  h1 {
     padding-left: 5%;
     padding-right: 5%;
     color: hsl(37, 97%, 92%);
   }
 
-  .searchHead{
+  h3 {
+    padding-left: 5%;
+    padding-right: 5%;
+    color: hsl(37, 97%, 92%);
+  }
+
+  .searchHead {
     margin-top: 10px;
   }
 
-  .searchInputField{
+  .searchInputField {
     color: hsl(37, 97%, 92%);
   }
 
-  .eventModalButton{
+  .eventModalButton {
     width: 50%;
     align-self: center;
     padding: 1%;
     background-color: hsl(51, 100%, 57%);
     border: none;
   }
-  .postModalButton{
+
+  .postModalButton {
     background-color: white;
     width: 50%;
     align-self: center;
     margin-bottom: 25px;
   }
 
-  .resultField{
+  .resultField {
     margin-left: 5%;
   }
 
-  .resultsSection{
+  .resultsSection {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .eventName {
     text-decoration: underline;
     color: hsl(51, 100%, 57%);
   }
-  .viewPostsButton{
+
+  .viewPostsButton {
     background-color: hsl(138, 81%, 40%);
     border: none;
     margin-right: 5%;
   }
-  .postContainer{
+
+  .postContainer {
     margin-left: 5%;
     margin-right: 5%;
     background-color: hsl(37, 97%, 98%);
@@ -110,11 +115,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
      div {
        padding-left: 5%;
        width: 80%;
-      p{
+      p {
         color: hsl(226, 39%, 24%);
         padding-left: 5%;
       }
-      h6{
+      h6 {
         color: hsl(226, 39%, 24%);
         padding-left: 5%;
       }
@@ -126,17 +131,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       color: hsl(51, 100%, 57%);
     }
   }
-
   }
   .liveNav{
     display: flex;
-    div{
+    div {
       width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       padding-bottom: 2%;
-      a{
+      a {
         padding-top: 2%;
         font-size: 2em;
         text-decoration: none;
