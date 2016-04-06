@@ -25,6 +25,9 @@
         </div>
         <button ui-sref="room({id: result._id.$oid, name: result.name, venueName: result.venue.name, venueCity: result.venue.city, venueState: result.venue.state })" type="button" class="viewPostsButton">View Posts</button>
       </div>
+      <div ng-hide="!noMatches" class="noMatchesAlert">
+        <p><strong>Oops! We couldn't find any events matching your search. Was the event spelled correctly? If so, please add a new event with this name</strong></p>
+      </div>
     </section>
     <button ng-click="showEventModal()" type="button" class="eventModalButton">Add an Event</button>
   </div>

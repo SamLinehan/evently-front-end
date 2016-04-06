@@ -94,6 +94,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     justify-content: space-between;
   }
 
+  .noMatchesAlert {
+    margin-left: 5%;
+    margin-right: 5%;
+    p {
+      text-align: justify;
+    }
+  }
+
   .eventName {
     text-decoration: underline;
     color: hsl(51, 100%, 57%);
@@ -124,15 +132,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
         padding-left: 5%;
       }
     }
-    button {
+      button {
       padding-right: 5%;
     }
-    .activeFavorite {
+      .activeFavorite {
       color: hsl(51, 100%, 57%);
+      }
     }
   }
-  }
-  .liveNav{
+  .liveNav {
     display: flex;
     div {
       width: 50%;

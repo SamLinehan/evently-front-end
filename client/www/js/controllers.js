@@ -14,7 +14,6 @@ function HomeController($scope, $http, $ionicModal){
    $scope.search = function(value){
      $scope.results = []
      $http.get('https://infinite-waters-87993.herokuapp.com/events').then(function(response){
-       console.log(response.data);
        for(var i = 0; i < response.data.length; i++){
          if(value === response.data[i].name){
            console.log("Event Name Match");
@@ -23,10 +22,12 @@ function HomeController($scope, $http, $ionicModal){
            console.log("Venue name match");
            $scope.results.push(response.data[i]);
          }
+         $scope.noMatches = false;
        }
        if($scope.results.length > 0){
          console.log(results);
        } else {
+         $scope.noMatches = true;
          console.log("No Matches");
        }
      })
