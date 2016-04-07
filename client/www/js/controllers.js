@@ -213,10 +213,10 @@ function LiveController($scope, $stateParams, $http, $ionicModal, $cordovaVibrat
       $scope.$apply();
     })
 
-  $scope.isActive = false
-  $scope.favoritesButton = function(result){
+  $scope.isActive = null
+  $scope.favoritesButton = function(result, index){
     $scope.result = result
-    $scope.isActive = !$scope.isActive
+    $scope.isActive = index
     postArray = JSON.parse(window.localStorage.posts);
     postArray.push($scope.result);
     console.log(postArray);
