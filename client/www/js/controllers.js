@@ -43,7 +43,6 @@ function HomeController($scope, $http, $ionicModal){
        console.log(data);
        return
      })
-     $cordovaVibration.vibrate(100);
    }
 
    $ionicModal.fromTemplateUrl('templates/eventModal.html', {
@@ -148,6 +147,9 @@ function FavoritesController($scope){
     $scope.liveActive = true
     $scope.favActive = false
   }
+
+  $scope.favoritePosts = JSON.parse(window.localStorage.getItem("posts"));
+
 }
 
 
@@ -161,7 +163,6 @@ function LiveController($scope, $stateParams, $http, $ionicModal, $cordovaVibrat
         for(var j = 0; j < response.data[i].posts.length; j++){
           $scope.postResults.unshift(response.data[i].posts[j]);
         }
-        console.log($scope.postResults);
       }
     }
   });
@@ -201,10 +202,9 @@ function LiveController($scope, $stateParams, $http, $ionicModal, $cordovaVibrat
     $http.post("https://infinite-waters-87993.herokuapp.com/create_post", postData).then(function(response){
       return
     })
-    $cordovaVibration.vibrate(100);
   };
 
-  var favPosts = []
+  var favPosts = [];
   window.localStorage.setItem("posts", JSON.stringify(favPosts));
 
     socket.on('display event', function(message){
@@ -218,6 +218,8 @@ function LiveController($scope, $stateParams, $http, $ionicModal, $cordovaVibrat
     $scope.result = result
     $scope.isActive = index
     postArray = JSON.parse(window.localStorage.posts);
+    console.log($scope.result);
+    console.log(postArray);
     postArray.push($scope.result);
     console.log(postArray);
     window.localStorage.setItem("posts", JSON.stringify(postArray));

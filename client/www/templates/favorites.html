@@ -7,4 +7,14 @@
       <a ng-click="toggleLive()"><span>Favorites</span></a>
     </div>
   </nav>
+  <section ng-repeat="favoritePost in favoritePosts">
+    <div class="postContainer favContainer">
+      <div>
+        <p>{{favoritePost["body"]}}</p>
+      </div>
+      <div>
+        <h6>{{favoritePost["name"]}}</h6>
+      </div>
+    </div>
+  </section>
 </div>

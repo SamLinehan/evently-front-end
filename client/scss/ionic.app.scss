@@ -113,6 +113,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     margin-right: 5%;
   }
 
+  .favContainer {
+    flex-direction: column;
+  }
+
   .postContainer {
     margin-left: 5%;
     margin-right: 5%;
