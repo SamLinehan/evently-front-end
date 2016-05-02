@@ -139,9 +139,9 @@ function FavoritesController($scope){
   $scope.liveActive = true;
 
   $scope.toggleFav = function(){
+    // window.history.back()
     $scope.favActive = true
     $scope.liveActive = false
-    window.history.back()
   }
   $scope.toggleLive = function(){
     $scope.liveActive = true
@@ -219,20 +219,29 @@ function LiveController($scope, $stateParams, $http, $ionicModal, $cordovaVibrat
     $scope.isActive = index
     postArray = JSON.parse(window.localStorage.posts);
     console.log($scope.result);
-    console.log(postArray);
     postArray.push($scope.result);
-    console.log(postArray);
     window.localStorage.setItem("posts", JSON.stringify(postArray));
   }
 
+  $scope.startingView = true;
+  $scope.nextView = false;
+
   $scope.favActive = true;
+  $scope.liveActive = false;
 
   $scope.toggleFav = function(){
     $scope.favActive = true
     $scope.liveActive = false
+
+    $scope.startingView = true;
+    $scope.nextView = false;
   }
+
   $scope.toggleLive = function(){
     $scope.liveActive = true
     $scope.favActive = false
+
+    $scope.nextView = true;
+    $scope.startingView = false;
   }
 }

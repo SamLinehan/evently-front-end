@@ -167,4 +167,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     .favLink {
       background-color: hsl(138, 81%, 40%);
     }
+    .liveView {
+      display: none;
+    }
+    .favoritesView {
+      display: none;
+    }
   }

@@ -1,11 +1,11 @@
 <ion-scroll direction="xy" height="1000px">
-  <section class="templateView" ng-init="postResults">
+  <section class="templateView" ng-class="{'liveView': startingView}" ng-init="postResults">
     <nav class="liveNav">
       <div ng-class="{'liveLink': favActive}">
         <a href="#" ng-click="toggleFav()"><span>Live</span</a>
       </div>
       <div ng-class="{'favLink': liveActive}">
-        <a ui-sref="favorites" href="templates/favorites.html" ng-click="toggleLive()"><span>Favorites</span></a>
+        <a ng-click="toggleLive()"><span>Favorites</span></a>
       </div>
     </nav>
     <h3>{{eventName}}</h3>
@@ -21,6 +21,26 @@
           </h6>
         </div>
       <button type="button" class="button button-icon ion-star custom-icon" ng-class="{'activeFavorite':$index == isActive}" ng-click="favoritesButton({{postResult}}, $index)"></button>
+      </div>
+    </div>
+  </section>
+  <section ng-class="{'favoritesView': nextView}">
+    <nav class="liveNav">
+      <div ng-class="{'liveLink': favActive}">
+        <a ng-click="toggleFav()"><span>Live</span</a>
+      </div>
+      <div ng-class="{'favLink': liveActive}">
+        <a ng-click="toggleLive()"><span>Favorites</span></a>
+      </div>
+    </nav>
+    <div ng-repeat="favoritePost in favoritePosts">
+      <div class="postContainer favContainer">
+        <div>
+          <p>{{favoritePost["body"]}}</p>
+        </div>
+        <div>
+          <h6>{{favoritePost["name"]}}</h6>
+        </div>
       </div>
     </div>
   </section>
